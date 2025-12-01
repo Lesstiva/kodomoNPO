@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ヘッダー -->
+    
     <header class="main-header">
         <div class="header-container">
             <div class="header-logo">
@@ -35,15 +35,15 @@
         </div>
     </header>
 
-    <!-- ローディング画面 -->
+    
     <div id="loading-screen" class="loading-screen">
         <div class="loading-spinner"></div>
         <p class="loading-text">読み込み中...</p>
     </div>
 
-    <!-- スクロールスナップコンテナ -->
+    
     <main id="scene-container" class="scene-container">
-        <!-- Scene 1: 導入：共感 -->
+        
         <section class="scene scene-1" data-scene="1">
             <div class="scene-content">
                 <div class="hero-text">
@@ -61,15 +61,15 @@
                             <div class="chart-title">児童虐待相談件数の推移</div>
                             <div class="chart-area">
                             <svg class="abuse-chart" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
-                                <!-- Y軸 -->
+                                
                                 <line x1="80" y1="20" x2="80" y2="360" stroke="#4a7c7e" stroke-width="2"/>
-                                <!-- X軸 -->
+                                
                                 <line x1="80" y1="360" x2="750" y2="360" stroke="#4a7c7e" stroke-width="2"/>
                                 
-                                <!-- Y軸ラベル（件数） -->
+                                
                                 <text x="40" y="30" fill="#2c3e50" font-size="14" font-weight="600" class="y-axis-label">件数</text>
                                 
-                                <!-- Y軸目盛りとラベル -->
+                                
                                 <line x1="75" y1="60" x2="85" y2="60" stroke="#4a7c7e" stroke-width="1"/>
                                 <text x="50" y="65" fill="#6c757d" font-size="12" class="y-axis-text">20万</text>
                                 
@@ -85,49 +85,49 @@
                                 <line x1="75" y1="300" x2="85" y2="300" stroke="#4a7c7e" stroke-width="1"/>
                                 <text x="50" y="305" fill="#6c757d" font-size="12" class="y-axis-text">0</text>
                                 
-                                <!-- データポイントと線 -->
-                                <!-- 1998年: 20,000件 (y=340) -->
+                                
+                                
                                 <circle class="chart-point" cx="150" cy="340" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
                                     <title>1998年（平成10年）: 約20,000件</title>
                                 </circle>
                                 <text x="150" y="355" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">2万</text>
                                 <text x="150" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">1998</text>
                                 
-                                <!-- 2003年: 30,000件 (y=300) -->
+                                
                                 <circle class="chart-point" cx="250" cy="300" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
                                     <title>2003年（平成15年）: 約30,000件</title>
                                 </circle>
                                 <text x="250" y="315" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">3万</text>
                                 <text x="250" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2003</text>
                                 
-                                <!-- 2008年: 40,000件 (y=260) -->
+                                
                                 <circle class="chart-point" cx="350" cy="260" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
                                     <title>2008年（平成20年）: 約40,000件</title>
                                 </circle>
                                 <text x="350" y="275" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">4万</text>
                                 <text x="350" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2008</text>
                                 
-                                <!-- 2013年: 70,000件 (y=180) -->
+                                
                                 <circle class="chart-point" cx="450" cy="180" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
                                     <title>2013年（平成25年）: 約70,000件</title>
                                 </circle>
                                 <text x="450" y="195" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">7万</text>
                                 <text x="450" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2013</text>
                                 
-                                <!-- 2018年: 150,000件 (y=120) -->
+                                
                                 <circle class="chart-point" cx="550" cy="120" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
                                     <title>2018年（平成30年）: 約150,000件</title>
                                 </circle>
                                 <text x="550" y="135" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">15万</text>
                                 <text x="550" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2018</text>
                                 
-                                <!-- 2022年: 219,170件 (y=60) -->
+                                
                                 <circle class="chart-point highlight-point" cx="650" cy="60" r="0" fill="#DA375E" stroke="#fff" stroke-width="3">
                                     <title>2022年（令和4年）: 219,170件（速報値）</title>
                                 </circle>
                                 <text x="650" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2022</text>
                                 
-                                <!-- 折れ線（パス） -->
+                                
                                 <path class="chart-line" d="M 150,340 L 250,300 L 350,260 L 450,180 L 550,120 L 650,60" 
                                       fill="none" stroke="#DA375E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                                 
@@ -137,12 +137,12 @@
                                     </marker>
                                 </defs>
                                 
-                                <!-- ハイライトラベル（最前面に表示） -->
+                                
                                 <g class="highlight-label">
                                     <rect x="560" y="5" width="180" height="50" rx="8" fill="#DA375E" opacity="0.95" class="highlight-rect"/>
                                     <text x="650" y="30" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle" class="highlight-main-text">219,170件</text>
                                     <text x="650" y="47" fill="#ffffff" font-size="12" text-anchor="middle" class="highlight-sub-text">(速報値)</text>
-                                    <!-- 矢印 -->
+                                    
                                     <line x1="650" y1="55" x2="650" y2="60" stroke="#DA375E" stroke-width="3" marker-end="url(#arrowhead)" class="highlight-arrow"/>
                                 </g>
                             </svg>
@@ -214,7 +214,7 @@
             </div>
         </section>
 
-        <!-- Scene 2: 年々増え続ける児童虐待 -->
+        
         <section class="scene scene-2" data-scene="2">
             <div class="scene-content">
                 <div class="hero-text scene-2-intro">
@@ -268,7 +268,7 @@
             </div>
         </section>
 
-        <!-- Scene 3: Authority & Mission -->
+        
         <section class="scene scene-3" data-scene="3">
             <div class="scene-content">
                 <div class="authority-header">
@@ -324,7 +324,7 @@
             </div>
         </section>
 
-        <!-- Scene 4: 行動喚起 -->
+        
         <section class="scene scene-4" data-scene="4">
             <div class="scene-content">
                 <h2 class="scene-title">今すぐ寄付で応援する</h2>
@@ -385,7 +385,7 @@
             </div>
         </section>
 
-        <!-- Scene 5: 支援の循環 -->
+        
         <section class="scene scene-5" data-scene="5">
             <div class="scene-content">
                 <div class="support-heading">
@@ -446,9 +446,9 @@
         <span class="button-icon">▶</span>
     </button>
 
-    <!-- 固定CTAボタン -->
+    
 
-    <!-- シーン進行インジケーター -->
+    
     <div class="scene-progress">
         <div class="progress-dots">
             <span class="dot active" data-scene="1"></span>
@@ -460,7 +460,7 @@
         </div>
     </div>
 
-    <!-- GSAP CDN -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>

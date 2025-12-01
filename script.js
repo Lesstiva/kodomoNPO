@@ -1,6 +1,3 @@
-// ============================================
-// グローバル状態
-// ============================================
 const activatedScenes = new Set();
 const DONATION_URL = 'https://congrant.com/project/npojcsa/173/form/step1?_gl=1*rg0b4h*_gcl_au*MTUzNzI0NjgzOC4xNzY0NTkxMjUy*_ga*MjAzMTMwNDAwMi4xNzY0NTkxMjUy*_ga_9MGQCPJ9MK*czE3NjQ2MDA3NzYkbzIkZzEkdDE3NjQ2MDM5NzYkajckbDAkaDk1MjYxMTAxMg..&_ga=2.221748312.1734535376.1764591252-2031304002.1764591252';
 let totalScenes = 0;
@@ -10,9 +7,6 @@ let animationSpeedFactor = 1;
 const MOBILE_SPEED_BREAKPOINT = 768;
 const MOTION_SKIP_BREAKPOINT = 560;
 
-// ============================================
-// 初期化
-// ============================================
 document.addEventListener('DOMContentLoaded', () => {
     updateMotionPreference();
     applyInitialAnimationStates();
@@ -23,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgressDots(1);
 });
 
-// ============================================
-// アセットの事前読み込み
-// ============================================
 function preloadAssets() {
     const loadingScreen = document.getElementById('loading-screen');
     
@@ -39,9 +30,6 @@ function preloadAssets() {
     });
 }
 
-// ============================================
-// イベントリスナーの設定
-// ============================================
 function setupEventListeners() {
     document.querySelectorAll('.dot').forEach((dot) => {
         dot.addEventListener('click', () => {
@@ -91,9 +79,6 @@ function setupEventListeners() {
     });
 }
 
-// ============================================
-// スクロールスナップ用のオブザーバー
-// ============================================
 function setupSceneObserver() {
     const scenes = document.querySelectorAll('.scene');
     if (!scenes.length) return;
@@ -139,9 +124,6 @@ function setupSceneObserver() {
     scenes.forEach(scene => observer.observe(scene));
 }
 
-// ============================================
-// シーン固有のアニメーション
-// ============================================
 function triggerSceneAnimations(sceneNumber) {
     switch(sceneNumber) {
         case 1:
@@ -161,9 +143,6 @@ function triggerSceneAnimations(sceneNumber) {
     }
 }
 
-// ============================================
-// Scene 1のグラフアニメーション
-// ============================================
 function animateScene1Chart() {
     const chartPoints = document.querySelectorAll('.chart-point');
     const chartLine = document.querySelector('.chart-line');
@@ -222,9 +201,6 @@ function animateScene1Chart() {
     }
 }
 
-// ============================================
-// Scene 2のデータアニメーション
-// ============================================
 function animateScene2Data() {
     const scene = document.querySelector('.scene-2');
     if (!scene || scene.dataset.animated === 'true') return;
@@ -291,9 +267,6 @@ function animateScene2Data() {
     }
 }
 
-// ============================================
-// Scene 3の権威セクションアニメーション
-// ============================================
 function animateScene3Authority() {
     const scene = document.querySelector('.scene-3');
     if (!scene || scene.dataset.animated === 'true') return;
@@ -397,9 +370,6 @@ function animateScene3Authority() {
     }
 }
 
-// ============================================
-// Scene 4のデータアニメーション
-// ============================================
 function animateScene4Data() {
     const resultValues = document.querySelectorAll('.scene-4 .result-value');
     
@@ -413,9 +383,6 @@ function animateScene4Data() {
     });
 }
 
-// ============================================
-// カウントアップアニメーション
-// ============================================
 function animateCounter(element, start, end, duration) {
     if (shouldReduceMotion) {
         element.textContent = end <= 100 ? `${end}%` : end.toLocaleString();
@@ -448,9 +415,6 @@ function animateCounter(element, start, end, duration) {
     requestAnimationFrame(updateCounter);
 }
 
-// ============================================
-// モーション設定と速度調整
-// ============================================
 function updateMotionPreference() {
     const viewportNarrow = window.innerWidth <= MOTION_SKIP_BREAKPOINT;
     shouldReduceMotion = motionMediaQuery.matches || viewportNarrow;
@@ -464,9 +428,6 @@ function getDuration(base) {
     return Math.max(base * animationSpeedFactor, 0.1);
 }
 
-// ============================================
-// チャート詳細の表示
-// ============================================
 function showChartDetails(chartItem) {
     const category = chartItem.dataset.label;
     const detailItems = document.querySelectorAll('.detail-item');
@@ -499,9 +460,6 @@ function showChartDetails(chartItem) {
     }
 }
 
-// ============================================
-// プログレスドットの更新
-// ============================================
 function updateProgressDots(activeScene) {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot) => {
@@ -516,9 +474,6 @@ function toggleScrollIndicator(show) {
     indicator.classList.toggle('hidden', !show);
 }
 
-// ============================================
-// 寄付金額の選択
-// ============================================
 function selectDonationAmount(amount, customValue = null) {
     const cards = document.querySelectorAll('.donation-card');
     cards.forEach(card => {
@@ -542,9 +497,6 @@ function selectDonationAmount(amount, customValue = null) {
     }
 }
 
-// ============================================
-// 寄付ボタンのクリック処理
-// ============================================
 function handleDonateClick() {
     const selectedCard = document.querySelector('.donation-card.selected');
     let amountValue = null;
@@ -594,9 +546,6 @@ function openDonationPage(amount) {
     window.open(url, '_blank');
 }
 
-// ============================================
-// 初期アニメーションの設定
-// ============================================
 function initializeAnimations() {
     const mainTitle = document.querySelector('.main-title');
     const subtitle = document.querySelector('.subtitle');
@@ -640,9 +589,6 @@ function initializeAnimations() {
     activatedScenes.add(1);
 }
 
-// ============================================
-// 初期状態の適用
-// ============================================
 function applyInitialAnimationStates() {
     if (window.gsap) {
         gsap.set(['.main-title', '.subtitle'], { opacity: 0, y: 30 });
@@ -659,9 +605,6 @@ function applyInitialAnimationStates() {
     }
 }
 
-// ============================================
-// パフォーマンス最適化：リサイズ時の処理
-// ============================================
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -673,7 +616,6 @@ window.addEventListener('resize', () => {
 if (motionMediaQuery.addEventListener) {
     motionMediaQuery.addEventListener('change', updateMotionPreference);
 } else if (motionMediaQuery.addListener) {
-    // Safari fallback
     motionMediaQuery.addListener(updateMotionPreference);
 }
 

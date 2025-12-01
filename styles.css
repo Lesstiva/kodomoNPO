@@ -1,6 +1,4 @@
-/* ============================================
-   リセット & ベーススタイル
-   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,22 +12,21 @@ html {
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     background: #faf8f5;
     color: #2c3e50;
     line-height: 1.6;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 * {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* ============================================
-   ヘッダー
-   ============================================ */
+
 .main-header {
     position: fixed;
     top: 0;
@@ -236,7 +233,7 @@ body {
         grid-template-columns: 80px 1fr;
     }
 
-    /* Scene 2 レスポンシブ（タブレット） */
+    
     .scene-2 .hero-text {
         margin-bottom: 12px;
     }
@@ -368,9 +365,7 @@ body {
     }
 }
 
-/* ============================================
-   カラーパレット（メインテーマカラー: #DA375E）
-   ============================================ */
+
 :root {
     --color-primary: #DA375E;
     --color-primary-light: #e85d7a;
@@ -388,9 +383,7 @@ body {
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* ============================================
-   ローディング画面
-   ============================================ */
+
 .loading-screen {
     position: fixed;
     top: 0;
@@ -430,9 +423,7 @@ body {
     font-size: 14px;
 }
 
-/* ============================================
-   シーンコンテナ
-   ============================================ */
+
 .scene-container {
     position: relative;
     width: 100%;
@@ -504,9 +495,7 @@ body {
     }
 }
 
-/* ============================================
-   Scene 1: 導入：共感
-   ============================================ */
+
 .scene-1 {
     background: linear-gradient(135deg, var(--color-cream) 0%, #f0ebe3 100%);
     background-image: url('img/background/background.webp');
@@ -830,7 +819,7 @@ body {
     overflow: visible;
 }
 
-/* SVG内のテキスト要素のレスポンシブ対応 */
+
 @media (max-width: 768px) {
     .abuse-chart .y-axis-label {
         font-size: 18px !important;
@@ -955,7 +944,7 @@ body {
     pointer-events: none;
 }
 
-/* 219,170件のラベルを最前面に表示 */
+
 .abuse-chart .highlight-label {
     z-index: 10;
 }
@@ -1120,9 +1109,7 @@ body {
     visibility: hidden;
 }
 
-/* ============================================
-   Scene 2: 年々増え続ける児童虐待
-   ============================================ */
+
 .scene-2 {
     background: radial-gradient(circle at 20% 20%, rgba(218, 55, 94, 0.18), transparent 55%),
                 radial-gradient(circle at 80% 0%, rgba(74, 124, 126, 0.2), transparent 60%),
@@ -1473,9 +1460,7 @@ body {
 }
 
 
-/* ============================================
-   Scene 3: Authority & Mission
-   ============================================ */
+
 .scene-3 {
     background: linear-gradient(135deg, #fff9f7 0%, #f3f0ff 55%, #f7fbff 100%);
 }
@@ -1728,9 +1713,7 @@ body {
     line-height: 1.7;
 }
 
-/* ============================================
-   Scene 4: 寄付金の使い道
-   ============================================ */
+
 .scene-4 {
     position: relative;
     background: linear-gradient(135deg, rgba(255, 246, 246, 0.92) 0%, rgba(242, 247, 255, 0.92) 100%);
@@ -1755,11 +1738,9 @@ body {
     z-index: 1;
 }
 
-/* (Scene 4 placeholder for future styles if needed) */
 
-/* ============================================
-   Scene 5: 支援循環
-   ============================================ */
+
+
 .scene-5 {
     position: relative;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 250, 255, 0.95) 100%),
@@ -1866,9 +1847,7 @@ body {
     line-height: 1.7;
 }
 
-/* ============================================
-   Footer
-   ============================================ */
+
 .site-footer {
     background: #ffffff;
     color: rgba(33, 33, 33, 0.85);
@@ -1939,9 +1918,7 @@ body {
     }
 }
 
-/* ============================================
-   Scene 6: 行動喚起
-   ============================================ */
+
 .scene-6 {
     background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-teal-dark) 100%);
     color: var(--color-white);
@@ -2158,13 +2135,9 @@ body {
     opacity: 0.9;
 }
 
-/* ============================================
-   固定CTAボタン
-   ============================================ */
 
-/* ============================================
-   シーン進行インジケーター
-   ============================================ */
+
+
 .scene-progress {
     position: fixed;
     right: 30px;
@@ -2201,9 +2174,7 @@ body {
     border-color: var(--color-terracotta-light);
 }
 
-/* ============================================
-   レスポンシブ対応
-   ============================================ */
+
 @media (max-width: 768px) {
     .scene-content {
         padding: 15px;
@@ -2487,7 +2458,7 @@ body {
 @media (max-width: 480px) {
     .scene-content {
         padding: 8px;
-        padding-top: 100px; /* ヘッダーとの距離を確保 */
+        padding-top: 100px; 
     }
 
     .hero-text {
@@ -2733,7 +2704,7 @@ body {
         font-size: 1.5rem;
     }
     
-    /* Scene 2 レスポンシブ */
+    
     .scene-2 .hero-text {
         margin-bottom: 12px;
     }
@@ -2810,9 +2781,7 @@ body {
     }
 }
 
-/* ============================================
-   アニメーション用ユーティリティクラス
-   ============================================ */
+
 .fade-in {
     animation: fadeIn 1s ease-in;
 }
