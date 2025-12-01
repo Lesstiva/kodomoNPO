@@ -467,6 +467,7 @@ body {
 @media (max-width: 768px) {
     .scene-container {
         scroll-padding-top: 110px;
+        scroll-snap-type: none;
     }
 
     .scene-content {
@@ -477,12 +478,15 @@ body {
     
     .scene {
         align-items: flex-start;
+        scroll-snap-align: unset;
+        scroll-snap-stop: unset;
     }
 }
 
 @media (max-width: 480px) {
     .scene-container {
         scroll-padding-top: 95px;
+        scroll-snap-type: none;
     }
 
     .scene-content {
@@ -492,6 +496,8 @@ body {
     
     .scene {
         align-items: flex-start;
+        scroll-snap-align: unset;
+        scroll-snap-stop: unset;
     }
 }
 
