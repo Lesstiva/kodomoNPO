@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>認定NPO法人 日本こども支援協会｜里親支援と児童虐待ゼロを目指す公式LP</title>
+    <meta name="description" content="認定NPO法人 日本こども支援協会は、里親支援・虐待予防・こどもの伴走支援を通じて、210万人のこどもたちの未来を守ります。里親22万世帯を実現するための寄付をぜひご検討ください。">
+    <meta name="keywords" content="認定NPO法人,日本こども支援協会,里親,虐待予防,寄付,里親支援,児童虐待">
+    <link rel="canonical" href="https://npojcsa.com/">
+    <title>NPO JCSA - 貧困と虐待に苦しむ210万人のこどもたちを救いたい</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="img/logo/logo.webp" alt="NPO JCSA 日本こども支援協会" class="logo-image">
+            </div>
+            <div class="header-message">
+                <p class="header-text">
+                    <span class="header-text-pc"><span class="header-number">210</span>万人の子どもを寄付で救ってくれませんか？</span>
+                    <span class="header-text-sp"><span class="header-number">210</span>万人の子どもを救ってくれませんか？</span>
+                </p>
+            </div>
+            <div class="header-cta">
+                <button class="header-donate-button" id="header-donate-button">
+                    <span>子どもたちを救う</span>
+                    <span class="button-icon">▶</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ローディング画面 -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">読み込み中...</p>
+    </div>
+
+    <!-- スクロールスナップコンテナ -->
+    <main id="scene-container" class="scene-container">
+        <!-- Scene 1: 導入：共感 -->
+        <section class="scene scene-1" data-scene="1">
+            <div class="scene-content">
+                <div class="hero-text">
+                    <h1 class="main-title">
+                        親からの「虐待」や「ネグレクト」は<br>
+                        <span class="main-title-line">
+                            <span class="main-title-number">22</span>万件以上
+                        </span>
+                    </h1>
+                    <p class="subtitle">児童養護施設の入所理由で一番多い理由です。</p>
+                </div>
+                <div class="chart-and-stats-container">
+                    <div class="chart-wrapper-combined">
+                        <div class="chart-section">
+                            <div class="chart-title">児童虐待相談件数の推移</div>
+                            <div class="chart-area">
+                            <svg class="abuse-chart" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+                                <!-- Y軸 -->
+                                <line x1="80" y1="20" x2="80" y2="360" stroke="#4a7c7e" stroke-width="2"/>
+                                <!-- X軸 -->
+                                <line x1="80" y1="360" x2="750" y2="360" stroke="#4a7c7e" stroke-width="2"/>
+                                
+                                <!-- Y軸ラベル（件数） -->
+                                <text x="40" y="30" fill="#2c3e50" font-size="14" font-weight="600" class="y-axis-label">件数</text>
+                                
+                                <!-- Y軸目盛りとラベル -->
+                                <line x1="75" y1="60" x2="85" y2="60" stroke="#4a7c7e" stroke-width="1"/>
+                                <text x="50" y="65" fill="#6c757d" font-size="12" class="y-axis-text">20万</text>
+                                
+                                <line x1="75" y1="120" x2="85" y2="120" stroke="#4a7c7e" stroke-width="1"/>
+                                <text x="50" y="125" fill="#6c757d" font-size="12" class="y-axis-text">15万</text>
+                                
+                                <line x1="75" y1="180" x2="85" y2="180" stroke="#4a7c7e" stroke-width="1"/>
+                                <text x="50" y="185" fill="#6c757d" font-size="12" class="y-axis-text">10万</text>
+                                
+                                <line x1="75" y1="240" x2="85" y2="240" stroke="#4a7c7e" stroke-width="1"/>
+                                <text x="50" y="245" fill="#6c757d" font-size="12" class="y-axis-text">5万</text>
+                                
+                                <line x1="75" y1="300" x2="85" y2="300" stroke="#4a7c7e" stroke-width="1"/>
+                                <text x="50" y="305" fill="#6c757d" font-size="12" class="y-axis-text">0</text>
+                                
+                                <!-- データポイントと線 -->
+                                <!-- 1998年: 20,000件 (y=340) -->
+                                <circle class="chart-point" cx="150" cy="340" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
+                                    <title>1998年（平成10年）: 約20,000件</title>
+                                </circle>
+                                <text x="150" y="355" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">2万</text>
+                                <text x="150" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">1998</text>
+                                
+                                <!-- 2003年: 30,000件 (y=300) -->
+                                <circle class="chart-point" cx="250" cy="300" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
+                                    <title>2003年（平成15年）: 約30,000件</title>
+                                </circle>
+                                <text x="250" y="315" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">3万</text>
+                                <text x="250" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2003</text>
+                                
+                                <!-- 2008年: 40,000件 (y=260) -->
+                                <circle class="chart-point" cx="350" cy="260" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
+                                    <title>2008年（平成20年）: 約40,000件</title>
+                                </circle>
+                                <text x="350" y="275" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">4万</text>
+                                <text x="350" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2008</text>
+                                
+                                <!-- 2013年: 70,000件 (y=180) -->
+                                <circle class="chart-point" cx="450" cy="180" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
+                                    <title>2013年（平成25年）: 約70,000件</title>
+                                </circle>
+                                <text x="450" y="195" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">7万</text>
+                                <text x="450" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2013</text>
+                                
+                                <!-- 2018年: 150,000件 (y=120) -->
+                                <circle class="chart-point" cx="550" cy="120" r="0" fill="#DA375E" stroke="#fff" stroke-width="2">
+                                    <title>2018年（平成30年）: 約150,000件</title>
+                                </circle>
+                                <text x="550" y="135" fill="#6c757d" font-size="8" text-anchor="middle" class="point-value">15万</text>
+                                <text x="550" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2018</text>
+                                
+                                <!-- 2022年: 219,170件 (y=60) -->
+                                <circle class="chart-point highlight-point" cx="650" cy="60" r="0" fill="#DA375E" stroke="#fff" stroke-width="3">
+                                    <title>2022年（令和4年）: 219,170件（速報値）</title>
+                                </circle>
+                                <text x="650" y="375" fill="#2c3e50" font-size="13" text-anchor="middle" class="x-axis-year">2022</text>
+                                
+                                <!-- 折れ線（パス） -->
+                                <path class="chart-line" d="M 150,340 L 250,300 L 350,260 L 450,180 L 550,120 L 650,60" 
+                                      fill="none" stroke="#DA375E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                                        <polygon points="0 0, 10 3, 0 6" fill="#DA375E"/>
+                                    </marker>
+                                </defs>
+                                
+                                <!-- ハイライトラベル（最前面に表示） -->
+                                <g class="highlight-label">
+                                    <rect x="560" y="5" width="180" height="50" rx="8" fill="#DA375E" opacity="0.95" class="highlight-rect"/>
+                                    <text x="650" y="30" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle" class="highlight-main-text">219,170件</text>
+                                    <text x="650" y="47" fill="#ffffff" font-size="12" text-anchor="middle" class="highlight-sub-text">(速報値)</text>
+                                    <!-- 矢印 -->
+                                    <line x1="650" y1="55" x2="650" y2="60" stroke="#DA375E" stroke-width="3" marker-end="url(#arrowhead)" class="highlight-arrow"/>
+                                </g>
+                            </svg>
+                        </div>
+                        </div>
+                        <div class="stat-box highlight-stat combined-death">
+                        <div class="death-stats-top">
+                            <div class="stat-label">虐待死として判明しているだけで年間</div>
+                            <div class="stat-number">50<span class="stat-unit">人以上</span></div>
+                        </div>
+                        <div class="death-stats-bottom">
+                            <div class="stat-text">
+                                <div class="stat-number-small">1週間に1人</div>
+                                <div class="stat-label">どこかで亡くなっているような状況です</div>
+                            </div>
+                            <div class="weekly-visual">
+                                <div class="week-container">
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_001.png" alt="月曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">月</div>
+                                    </div>
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_002.png" alt="火曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">火</div>
+                                    </div>
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_003.png" alt="水曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">水</div>
+                                    </div>
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_001.png" alt="木曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">木</div>
+                                    </div>
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_002.png" alt="金曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">金</div>
+                                    </div>
+                                    <div class="day-item">
+                                        <div class="person-icon">
+                                            <img src="img/children/children_003.png" alt="土曜日" class="person-image">
+                                        </div>
+                                        <div class="day-label">土</div>
+                                    </div>
+                                    <div class="day-item highlight-day">
+                                        <div class="person-icon dead">
+                                            <img src="img/children/children_001.png" alt="日曜日" class="person-image dead-image">
+                                        </div>
+                                        <div class="day-label">日</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-indicator">
+                    <span class="indicator-text">スクロールして続きを見る</span>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 2: 年々増え続ける児童虐待 -->
+        <section class="scene scene-2" data-scene="2">
+            <div class="scene-content">
+                <div class="hero-text scene-2-intro">
+                    <h2 class="scene-title">児童虐待から保護できる確率は<span class="highlight-percentage"><span class="highlight-percentage-number">2</span>%</span></h2>
+                    <p class="scene-lede">相談件数は直近20年で4倍以上に増加し、実際に命を落とすこどもも後を絶ちません。ここでは近年の象徴的な3つのケースをわかりやすく可視化しました。</p>
+                </div>
+                
+                <div class="case-grid">
+                    <article class="case-card" data-case="01">
+                        <div class="case-media">
+                            <img src="img/case/case_001.webp" alt="2010年大阪市の事例">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="case-year">2010年</span>
+                                <span class="case-location">大阪市</span>
+                            </div>
+                            <h3 class="case-headline">施錠された部屋に取り残された幼い兄妹</h3>
+                            <p class="case-description">桜子ちゃん（当時3歳）、楓くん（当時1歳）が扉をテープで塞がれたマンションに置き去りにされ餓死。発見時にはすでに死亡から1ヶ月が経過していました。</p>
+                        </div>
+                    </article>
+
+                    <article class="case-card" data-case="02">
+                        <div class="case-media">
+                            <img src="img/case/case_002.webp" alt="2018年東京都目黒区の事例">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="case-year">2018年</span>
+                                <span class="case-location">東京都目黒区</span>
+                            </div>
+                            <h3 class="case-headline">栄養失調と暴力で命を奪われた5歳児</h3>
+                            <p class="case-description">結愛ちゃん（当時5歳）。十分な食事を与えられないまま栄養失調に陥り、冷水を浴びせられ顔を殴打される虐待を受け続け、肺炎を発症して死亡しました。</p>
+                        </div>
+                    </article>
+
+                    <article class="case-card" data-case="03">
+                        <div class="case-media">
+                            <img src="img/case/case_003.webp" alt="2022年大阪府富田林市の事例">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="case-year">2022年</span>
+                                <span class="case-location">大阪府富田林市</span>
+                            </div>
+                            <h3 class="case-headline">ベビーサークルに閉じ込められた2歳児</h3>
+                            <p class="case-description">優陽（ゆうは）ちゃん（2歳）が自宅のベビーサークルに閉じ込められたまま放置され、発見者は同居する15歳の兄でした。幼い兄弟も同じ空間で暮らしていました。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 3: Authority & Mission -->
+        <section class="scene scene-3" data-scene="3">
+            <div class="scene-content">
+                <div class="authority-header">
+                    <h2 class="scene-title"><span class="scene-title-number">210万人</span>の子供を<br>一緒に救ってくれませんか？</h2>
+                    <p class="scene-lede">里親家庭というあたたかな居場所を広げることで、虐待や孤立の連鎖を断ち切りたい。その想いを掲げ、現場に根ざした経験と行動力をもつリーダーが最前線で子どもたちを支えています。</p>
+                </div>
+                <div class="authority-grid">
+                    <article class="authority-profile-card">
+                        <div class="authority-photo">
+                            <img src="img/authority/photo.webp" alt="認定NPO法人 日本こども支援協会 代表理事 岩朝しのぶ">
+                        </div>
+                        <div class="authority-profile-body">
+                            <p class="authority-role">認定NPO法人 日本こども支援協会 代表理事</p>
+                            <h3 class="authority-name">岩朝 しのぶ</h3>
+                            <p class="authority-bio">1973年宮城県生まれ。先天性の病気により16回の手術を経験しながらも、シングルマザーの母親に支えられて幼少期を過ごす。25歳での起業後、約50名規模の広告代理店を率い、不妊治療を経て養育里親に。新米里親時代に先輩里親から受けた支えを礎に「ONE LOVE」を立ち上げ、10年以上にわたって子どもたちの伴走を続ける。経験と実行力を兼ね備えた、日本の里親ムーブメントを牽引するリーダー。</p>
+                            <ul class="authority-achievements">
+                                <li>一般社団法人 明日へのチカラ 代表理事</li>
+                                <li>南大阪みささぎライオンズクラブ 2020-2022 会長</li>
+                                <li>大阪を変える100人会議 5期世話人</li>
+                                <li>公益財団法人 SBI子ども希望財団 諮問委員</li>
+                                <li>NHK近畿地方放送番組審議会 委員</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <aside class="authority-org-card">
+                        <h3 class="org-card-title">団体概要</h3>
+                        <div class="org-logo">
+                            <img src="img/logo/logo.webp" alt="認定NPO法人 日本こども支援協会 ロゴ">
+                        </div>
+                        <dl class="org-info">
+                            <div class="org-info-row">
+                                <dt>名称</dt>
+                                <dd>認定NPO法人 日本こども支援協会</dd>
+                            </div>
+                            <div class="org-info-row">
+                                <dt>設立日</dt>
+                                <dd>2010年5月5日（NPO法人格取得：2015年3月23日）</dd>
+                            </div>
+                            <div class="org-info-row">
+                                <dt>役員</dt>
+                                <dd>代表理事　岩朝 しのぶ</dd>
+                            </div>
+                            <div class="org-info-row">
+                                <dt>所在地</dt>
+                                <dd>大阪市天王寺区上汐3丁目2番16号 アリビオ上本町502</dd>
+                            </div>
+                        </dl>
+                        <div class="org-note">
+                            <p>里親支援・子どもの虐待予防・社会的養護の充実を掲げ、行政や専門家とも連携しながら包括的な伴走支援を実施。全国の里親家庭を結ぶネットワーク拡充と政策提言にも注力しています。</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 4: 行動喚起 -->
+        <section class="scene scene-4" data-scene="4">
+            <div class="scene-content">
+                <h2 class="scene-title">今すぐ寄付で応援する</h2>
+                <p class="scene-description">あなたの寄付が、210万人のこどもたちの未来を変えます</p>
+                <div class="donation-options">
+                    <div class="donation-tier-column">
+                        <div class="donation-card" data-amount="2000">
+                            <div class="card-amount">¥2,000</div>
+                            <p class="card-impact"><span class="impact-number">1人</span>の子どもたちに、里親のもとへ安心して向かうための衣食住サポートを届けられます。</p>
+                        </div>
+                        <div class="donation-card" data-amount="5000">
+                            <div class="card-amount">¥5,000</div>
+                            <p class="card-impact"><span class="impact-number">3人</span>の子どもたちが里親家庭へ移行する際の生活用品や学習セットを整えられます。</p>
+                        </div>
+                        <div class="donation-card" data-amount="10000">
+                            <div class="card-amount">¥10,000</div>
+                            <p class="card-impact"><span class="impact-number">5人</span>の子どもたちを継続的に見守り、里親家庭での伴走支援を強化できます。</p>
+                        </div>
+                    </div>
+                    <div class="donation-custom-column">
+                        <div class="donation-card donation-card-custom" data-amount="custom">
+                            <div class="card-amount">任意の金額</div>
+                            <p class="card-impact">自由なご寄付が、支援を待つ子どもたちの未来をさらに広げます。</p>
+                            <div class="custom-donation-input">
+                                <label for="custom-amount" class="custom-input-label">お好きな金額を入力</label>
+                                <input id="custom-amount" type="number" class="custom-amount-input" min="500" placeholder="例：15000">
+                                <button type="button" class="custom-donate-button">寄付手続きへ</button>
+                            </div>
+                        </div>
+                        <div class="donation-tax-info">
+                            <p>認定NPO日本こども支援協会へのご寄付は、個人、法人共に税制優遇の対象です。</p>
+                            <p>法人は特別損金算入限度額が利用でき、個人は寄付金控除により、還付（寄付した金額の最大約5割が手元に戻ってきます）を受けることができます。</p>
+                            <p>このページをご覧になったたくさんの方々から「ご寄付」をいただいています。</p>
+                            <p>あなたのご寄付でこどもたちを守る仕組みを実現できると私達は信じています。ぜひ仲間になってください。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sponsor-support">
+                    <p class="sponsor-lede">多くの企業・団体のみなさまが協賛し、里親支援とこどもたちの未来づくりを後押ししています。</p>
+                    <div class="sponsor-logos">
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_16.webp" alt="協賛企業 16"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_17.webp" alt="協賛企業 17"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_18.webp" alt="協賛企業 18"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_19.webp" alt="協賛企業 19"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_20.webp" alt="協賛企業 20"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_21.webp" alt="協賛企業 21"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_22.webp" alt="協賛企業 22"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_23.webp" alt="協賛企業 23"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_24.webp" alt="協賛企業 24"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_25.webp" alt="協賛企業 25"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_26.webp" alt="協賛企業 26"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_27.webp" alt="協賛企業 27"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_28.webp" alt="協賛企業 28"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_29.webp" alt="協賛企業 29"></div>
+                        <div class="sponsor-logo"><img src="img/logo/sponsor/sec08_30.webp" alt="協賛企業 30"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 5: 支援の循環 -->
+        <section class="scene scene-5" data-scene="5">
+            <div class="scene-content">
+                <div class="support-heading">
+                    <p class="support-tag">日本こども支援協会は里親を増やし、支援しています</p>
+                    <h2 class="scene-title">私たちは皆様と一緒に<br>里親<span class="scene-title-number">22万</span>世帯を実現したいです</h2>
+                    <p class="scene-lede">「ひろげる」「ささえる」「つなげる」という役割を丁寧に果たし、里親制度の輪を全国へ広げています。</p>
+                </div>
+                <div class="support-grid">
+                    <article class="support-card">
+                        <div class="support-image">
+                            <img src="img/support/sec07_1.webp" alt="ひろげる">
+                        </div>
+                        <div class="support-body">
+                            <span class="support-label">ひろげる</span>
+                            <h3 class="support-title">里親になることの意義を伝え、里親になりたい人を増やしていきます。</h3>
+                            <p class="support-text">セミナーやストーリーテリング、実際の里親の声を通じて「里親になる」という一歩を後押し。虐待や孤立に苦しむ子どもたちへ家庭という選択肢を届けます。</p>
+                        </div>
+                    </article>
+                    <article class="support-card">
+                        <div class="support-image">
+                            <img src="img/support/sec07_2.webp" alt="ささえる">
+                        </div>
+                        <div class="support-body">
+                            <span class="support-label">ささえる</span>
+                            <h3 class="support-title">里親が安心して養育に専念できる環境を整え、里親を支援していきます。</h3>
+                            <p class="support-text">伴走スタッフや専門家による相談窓口、学習・生活資源を用意し、里親家庭の不安や孤立を最小化。子ども一人ひとりに寄り添う養育を守ります。</p>
+                        </div>
+                    </article>
+                    <article class="support-card">
+                        <div class="support-image">
+                            <img src="img/support/sec07_3.webp" alt="つなげる">
+                        </div>
+                        <div class="support-body">
+                            <span class="support-label">つなげる</span>
+                            <h3 class="support-title">全国の里親同士が自ら繋がることができるサポート体制を作ります。</h3>
+                            <p class="support-text">コミュニティやオンラインプログラムを整備し、地域を越えたネットワークを構築。経験と知恵を共有できる仕組みで、里親の孤立を防ぎます。</p>
+                        </div>
+                    </article>
+                </div>
+                <footer class="site-footer">
+                    <div class="footer-inner">
+                        <div class="footer-brand">
+                            <p class="footer-organization">認定NPO法人 日本こども支援協会</p>
+                            <p class="footer-address">大阪市天王寺区上汐3丁目2番16号 アリビオ上本町502</p>
+                        </div>
+                        <div class="footer-links">
+                            <a href="https://npojcsa.com/contact.html" class="footer-contact" target="_blank" rel="noopener noreferrer">お問い合わせ先</a>
+                        </div>
+                    </div>
+                    <p class="footer-copy">© 日本こども支援協会</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <button class="floating-donate-button" id="floating-donate-button">
+        <span>子どもたちを救う</span>
+        <span class="button-icon">▶</span>
+    </button>
+
+    <!-- 固定CTAボタン -->
+
+    <!-- シーン進行インジケーター -->
+    <div class="scene-progress">
+        <div class="progress-dots">
+            <span class="dot active" data-scene="1"></span>
+            <span class="dot" data-scene="2"></span>
+            <span class="dot" data-scene="3"></span>
+            <span class="dot" data-scene="4"></span>
+            <span class="dot" data-scene="5"></span>
+            <span class="dot" data-scene="6"></span>
+        </div>
+    </div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
