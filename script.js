@@ -5,7 +5,7 @@ const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let shouldReduceMotion = motionMediaQuery.matches;
 let animationSpeedFactor = 1;
 const MOBILE_SPEED_BREAKPOINT = 768;
-const MOTION_SKIP_BREAKPOINT = 560;
+const MOTION_SKIP_BREAKPOINT = 1024;
 
 document.addEventListener('DOMContentLoaded', () => {
     updateMotionPreference();
