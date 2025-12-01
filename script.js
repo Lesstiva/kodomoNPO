@@ -90,7 +90,7 @@ function setupSceneObserver() {
         }
     });
 
-    if (!('IntersectionObserver' in window)) {
+    if (!('IntersectionObserver' in window) || shouldReduceMotion) {
         toggleScrollIndicator(true);
         scenes.forEach(scene => {
             const number = parseInt(scene.dataset.scene, 10);
