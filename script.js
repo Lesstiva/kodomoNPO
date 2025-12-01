@@ -590,19 +590,18 @@ function initializeAnimations() {
 }
 
 function applyInitialAnimationStates() {
-    if (window.gsap) {
-        gsap.set(['.main-title', '.subtitle'], { opacity: 0, y: 30 });
-        gsap.set('.stat-box', { opacity: 0, y: 30 });
-        gsap.set('.abuse-chart-container', { opacity: 0, y: 50 });
-        gsap.set('.scene-2 .scene-2-intro > *', { opacity: 0, y: 25 });
-        gsap.set('.case-card', { opacity: 0, y: 40, scale: 0.96 });
-        gsap.set('.case-media img', { opacity: 0, scale: 1.08 });
-        gsap.set('.authority-header > *', { opacity: 0, y: 25 });
-        gsap.set('.authority-profile-card', { opacity: 0, y: 40, scale: 0.96 });
-        gsap.set('.authority-org-card', { opacity: 0, x: 60 });
-        gsap.set('.authority-achievements li', { opacity: 0, x: -20 });
-        gsap.set('.org-info-row', { opacity: 0, x: 20 });
-    }
+    if (shouldReduceMotion || !window.gsap) return;
+    gsap.set(['.main-title', '.subtitle'], { opacity: 0, y: 30 });
+    gsap.set('.stat-box', { opacity: 0, y: 30 });
+    gsap.set('.abuse-chart-container', { opacity: 0, y: 50 });
+    gsap.set('.scene-2 .scene-2-intro > *', { opacity: 0, y: 25 });
+    gsap.set('.case-card', { opacity: 0, y: 40, scale: 0.96 });
+    gsap.set('.case-media img', { opacity: 0, scale: 1.08 });
+    gsap.set('.authority-header > *', { opacity: 0, y: 25 });
+    gsap.set('.authority-profile-card', { opacity: 0, y: 40, scale: 0.96 });
+    gsap.set('.authority-org-card', { opacity: 0, x: 60 });
+    gsap.set('.authority-achievements li', { opacity: 0, x: -20 });
+    gsap.set('.org-info-row', { opacity: 0, x: 20 });
 }
 
 let resizeTimeout;
